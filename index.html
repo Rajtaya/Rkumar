@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajesh Kumar (computer scientist) - Wikipedia</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #202122;
+            background: #f8f9fa;
+        }
+
+        /* Wikipedia Header */
+        .wiki-header {
+            background: #fff;
+            border-bottom: 1px solid #a7d7f9;
+            padding: 0;
+        }
+        .wiki-header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            padding: 8px 20px;
+        }
+        .wiki-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #000;
+        }
+        .wiki-logo-img {
+            width: 50px;
+            height: 50px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: #000;
+            font-family: 'Linux Libertine', serif;
+        }
+        .wiki-logo-text {
+            font-size: 18px;
+            font-family: 'Linux Libertine', serif;
+            letter-spacing: -0.5px;
+        }
+        .wiki-logo-text small {
+            display: block;
+            font-size: 11px;
+            color: #54595d;
+            letter-spacing: 0;
+        }
+        .wiki-nav {
+            display: flex;
+            gap: 0;
+            margin-left: auto;
+            font-size: 12px;
+        }
+        .wiki-nav a {
+            padding: 6px 12px;
+            color: #0645ad;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+        }
+        .wiki-nav a:hover {
+            border-bottom: 2px solid #0645ad;
+        }
+        .wiki-nav a.active {
+            background: #fff;
+            border-bottom: 2px solid #36c;
+            font-weight: bold;
+        }
+
+        /* Tab bar */
+        .wiki-tabs {
+            background: #fff;
+            border-bottom: 1px solid #a7d7f9;
+        }
+        .wiki-tabs-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            padding: 0 20px;
+            font-size: 13px;
+        }
+        .wiki-tabs a {
+            padding: 8px 14px;
+            color: #0645ad;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+        }
+        .wiki-tabs a.active {
+            color: #202122;
+            border-bottom: 3px solid #36c;
+            font-weight: normal;
+            background: #fff;
+        }
+
+        /* Main content */
+        .wiki-body {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border: 1px solid #a7d7f9;
+            border-top: none;
+            min-height: 100vh;
+        }
+        .wiki-content {
+            padding: 20px 24px;
+        }
+
+        /* Article title */
+        .article-title {
+            font-family: 'Linux Libertine', 'Georgia', serif;
+            font-size: 28px;
+            font-weight: normal;
+            border-bottom: 1px solid #a2a9b1;
+            padding-bottom: 4px;
+            margin-bottom: 16px;
+            color: #000;
+        }
+
+        /* Infobox */
+        .infobox {
+            float: right;
+            clear: right;
+            width: 320px;
+            margin: 0 0 16px 20px;
+            border: 1px solid #a2a9b1;
+            background: #f8f9fa;
+            font-size: 13px;
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        .infobox-header {
+            background: #b0c4de;
+            text-align: center;
+            padding: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+        }
+        .infobox-subheader {
+            background: #d0dff0;
+            text-align: center;
+            padding: 6px;
+            font-size: 13px;
+            font-style: italic;
+        }
+        .infobox-image {
+            text-align: center;
+            padding: 10px;
+            background: #f8f9fa;
+        }
+        .infobox-image .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2c3e6b, #4a6fa5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            color: #fff;
+            font-size: 52px;
+            font-weight: bold;
+            font-family: 'Georgia', serif;
+        }
+        .infobox td, .infobox th {
+            padding: 5px 8px;
+            vertical-align: top;
+            border-top: 1px solid #e0e0e0;
+        }
+        .infobox th {
+            text-align: left;
+            background: #e8ecf1;
+            font-weight: normal;
+            color: #54595d;
+            width: 110px;
+            font-size: 12px;
+        }
+        .infobox td {
+            background: #f8f9fa;
+        }
+        .infobox a {
+            color: #0645ad;
+            text-decoration: none;
+        }
+        .infobox a:hover {
+            text-decoration: underline;
+        }
+        .infobox-section {
+            background: #dce5f0;
+            text-align: center;
+            font-weight: bold;
+            padding: 5px;
+            font-size: 13px;
+        }
+
+        /* Headings */
+        h2 {
+            font-family: 'Linux Libertine', 'Georgia', serif;
+            font-size: 22px;
+            font-weight: normal;
+            border-bottom: 1px solid #a2a9b1;
+            margin: 24px 0 8px 0;
+            padding-bottom: 2px;
+        }
+        h2 .mw-headline { font-weight: normal; }
+        h2 .mw-editsection {
+            font-size: 12px;
+            font-weight: normal;
+            margin-left: 8px;
+            color: #0645ad;
+            font-family: sans-serif;
+        }
+        h2 .mw-editsection a { color: #0645ad; text-decoration: none; }
+
+        h3 {
+            font-family: 'Linux Libertine', 'Georgia', serif;
+            font-size: 17px;
+            font-weight: bold;
+            margin: 16px 0 6px 0;
+        }
+
+        /* Paragraphs */
+        p { margin-bottom: 10px; }
+        a { color: #0645ad; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* Lists */
+        ul, ol {
+            margin: 6px 0 10px 24px;
+        }
+        li { margin-bottom: 3px; }
+
+        /* Table of Contents */
+        .toc {
+            display: inline-block;
+            background: #f8f9fa;
+            border: 1px solid #a2a9b1;
+            padding: 10px 16px;
+            margin: 10px 0 16px 0;
+            font-size: 13px;
+        }
+        .toc-title {
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 6px;
+        }
+        .toc ol {
+            margin: 0;
+            padding-left: 24px;
+        }
+        .toc li {
+            margin: 2px 0;
+        }
+        .toc a {
+            color: #0645ad;
+        }
+        .tocnumber { margin-right: 4px; }
+
+        /* Wikipedia-style tables */
+        .wikitable {
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 13px;
+            width: 100%;
+        }
+        .wikitable th, .wikitable td {
+            border: 1px solid #a2a9b1;
+            padding: 6px 8px;
+            text-align: left;
+        }
+        .wikitable th {
+            background: #eaecf0;
+            font-weight: bold;
+        }
+        .wikitable tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        /* Categories */
+        .catlinks {
+            background: #f8f9fa;
+            border: 1px solid #a2a9b1;
+            padding: 8px 12px;
+            margin-top: 30px;
+            font-size: 12px;
+        }
+        .catlinks a { color: #0645ad; }
+
+        /* Superscript references */
+        sup.reference {
+            font-size: 11px;
+            color: #0645ad;
+        }
+
+        /* Bold for key terms */
+        .bold-title { font-weight: bold; }
+
+        /* Clear float */
+        .clear { clear: both; }
+
+        /* Footer */
+        .wiki-footer {
+            background: #f8f9fa;
+            border-top: 1px solid #a2a9b1;
+            padding: 16px 24px;
+            font-size: 12px;
+            color: #72777d;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .infobox {
+                float: none;
+                width: 100%;
+                margin: 0 0 16px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Wikipedia Header -->
+<div class="wiki-header">
+    <div class="wiki-header-inner">
+        <a class="wiki-logo" href="#">
+            <div class="wiki-logo-img">W</div>
+            <div class="wiki-logo-text">
+                Wikipedia
+                <small>The Free Encyclopedia</small>
+            </div>
+        </a>
+        <nav class="wiki-nav">
+            <a href="#">Main page</a>
+            <a href="#">Contents</a>
+            <a href="#">Current events</a>
+            <a href="#">Random article</a>
+            <a href="#">About Wikipedia</a>
+        </nav>
+    </div>
+</div>
+
+<!-- Tab bar -->
+<div class="wiki-tabs">
+    <div class="wiki-tabs-inner">
+        <a href="#" class="active">Article</a>
+        <a href="#">Talk</a>
+        <a href="#">Read</a>
+        <a href="#">Edit</a>
+        <a href="#">View history</a>
+    </div>
+</div>
+
+<!-- Main Body -->
+<div class="wiki-body">
+    <div class="wiki-content">
+
+        <h1 class="article-title">Rajesh Kumar (computer scientist)</h1>
+
+        <!-- Infobox -->
+        <table class="infobox">
+            <tr><td colspan="2" class="infobox-header">Dr. Rajesh Kumar</td></tr>
+            <tr><td colspan="2" class="infobox-image">
+                <div class="avatar">RK</div>
+            </td></tr>
+            <tr><th>Born</th><td>3 August 1984<br><a href="#">Kurukshetra</a>, <a href="#">Haryana</a>, India</td></tr>
+            <tr><th>Nationality</th><td>Indian</td></tr>
+            <tr><th>Alma mater</th><td><a href="#">Kurukshetra University</a></td></tr>
+            <tr><th>Known for</th><td>Search-Based Software Engineering, Theory of Computation, Genetic Algorithms</td></tr>
+            <tr><td colspan="2" class="infobox-section">Academic career</td></tr>
+            <tr><th>Field</th><td><a href="#">Computer Science</a></td></tr>
+            <tr><th>Institution</th><td><a href="#">CRM Jat College</a>, Hisar<br>(Chaudhary Ranbir Singh University, Jind)</td></tr>
+            <tr><th>Designation</th><td>Assistant Professor &amp; Head</td></tr>
+            <tr><th>Department</th><td>Computer Science &amp; Applications</td></tr>
+            <tr><th>Thesis</th><td><i>Search Based Software Engineering Using Metaheuristics</i> (2020)</td></tr>
+            <tr><th>Doctoral advisor</th><td>Kurukshetra University</td></tr>
+            <tr><td colspan="2" class="infobox-section">Online presence</td></tr>
+            <tr><th>Website</th><td>rajtaya@kuk.ac.in</td></tr>
+            <tr><th>ORCID</th><td><a href="#">0000-0002-789X-5495</a></td></tr>
+            <tr><th>Google Scholar</th><td><a href="#">Profile</a></td></tr>
+            <tr><th>ResearchGate</th><td><a href="#">Profile</a></td></tr>
+        </table>
+
+        <!-- Lead paragraph -->
+        <p>
+            <span class="bold-title">Rajesh Kumar</span> (born 3 August 1984) is an Indian <a href="#">computer scientist</a>,
+            academician, and researcher serving as <a href="#">Assistant Professor</a> and Head of the Department of
+            Computer Science &amp; Applications at <a href="#">CRM Jat College</a>, <a href="#">Hisar</a>,
+            <a href="#">Haryana</a>, India, affiliated with <a href="#">Chaudhary Ranbir Singh University</a>, Jind.
+            He holds a <a href="#">Ph.D.</a> in Computer Science from <a href="#">Kurukshetra University</a>,
+            with his doctoral research focused on <i>Search Based Software Engineering Using Metaheuristics</i>.
+        </p>
+        <p>
+            With over 16 years of teaching and research experience, Kumar specialises in
+            <a href="#">Linux System Administration</a>, <a href="#">Python</a> programming,
+            <a href="#">Machine Learning</a>, <a href="#">Theory of Computation</a>,
+            <a href="#">Design and Analysis of Algorithms</a>, <a href="#">Artificial Intelligence</a>,
+            and <a href="#">Data Structures</a>. He has published 13 research papers in reputed national and
+            international journals indexed in <a href="#">UGC CARE</a>, <a href="#">Scopus</a>, and
+            <a href="#">SCI</a>, and has authored 5 books and book chapters. He is also recognised
+            as an expert in <a href="#">Linux Administration</a> and <a href="#">LaTeX</a> typesetting
+            for academic documentation.
+        </p>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <div class="toc-title">Contents</div>
+            <ol>
+                <li><a href="#early-life"><span class="tocnumber">1</span> Early life and education</a></li>
+                <li><a href="#career"><span class="tocnumber">2</span> Academic career</a></li>
+                <li><a href="#research"><span class="tocnumber">3</span> Research</a>
+                    <ol>
+                        <li><a href="#research-interests"><span class="tocnumber">3.1</span> Research interests</a></li>
+                        <li><a href="#publications"><span class="tocnumber">3.2</span> Selected publications</a></li>
+                    </ol>
+                </li>
+                <li><a href="#books"><span class="tocnumber">4</span> Books and book chapters</a></li>
+                <li><a href="#courses"><span class="tocnumber">5</span> Courses taught</a></li>
+                <li><a href="#skills"><span class="tocnumber">6</span> Technical expertise</a></li>
+                <li><a href="#workshops"><span class="tocnumber">7</span> Workshops, FDPs, and conferences</a></li>
+                <li><a href="#admin"><span class="tocnumber">8</span> Administrative responsibilities</a></li>
+                <li><a href="#references"><span class="tocnumber">9</span> References</a></li>
+                <li><a href="#external"><span class="tocnumber">10</span> External links</a></li>
+            </ol>
+        </div>
+
+        <!-- Early life and education -->
+        <h2 id="early-life"><span class="mw-headline">Early life and education</span></h2>
+        <p>
+            Rajesh Kumar was born on 3 August 1984 in <a href="#">Kurukshetra</a>, <a href="#">Haryana</a>, India.
+            He completed his schooling in the Kurukshetra region and pursued his higher education at
+            <a href="#">Kurukshetra University</a>, one of the premier universities in northern India.
+        </p>
+        <p>
+            Kumar obtained his <a href="#">Bachelor of Science</a> (B.Sc.) degree in Non-Medical stream
+            from Kurukshetra University in 2006. He then pursued a <a href="#">Master of Computer Applications</a>
+            (MCA) from the same university, graduating in 2009. He subsequently earned his
+            <a href="#">Doctor of Philosophy</a> (Ph.D.) in Computer Science from Kurukshetra University in 2020,
+            with his doctoral thesis titled <i>"Search Based Software Engineering Using Metaheuristics"</i>,
+            which explored the application of <a href="#">metaheuristic</a> algorithms to software engineering
+            problems such as requirement optimisation and <a href="#">genetic algorithms</a>.
+        </p>
+
+        <!-- Academic career -->
+        <h2 id="career"><span class="mw-headline">Academic career</span></h2>
+        <p>
+            Kumar began his teaching career in 2009 as an Assistant Professor at University College,
+            Kurukshetra (UCK), <a href="#">Kurukshetra University</a>, where he taught undergraduate courses
+            until 2010. He then moved to the Department of Computer Science and Applications (DCSA) at
+            Kurukshetra University, where he served as an Assistant Professor handling postgraduate teaching
+            from 2010 to 2014.
+        </p>
+        <p>
+            Since July 2014, Kumar has been serving as Assistant Professor at
+            <a href="#">CRM Jat College</a>, <a href="#">Hisar</a>, Haryana, affiliated with
+            <a href="#">Chaudhary Ranbir Singh University</a>, Jind. He was subsequently appointed
+            as Head of the Department of Computer Science &amp; Applications at the same institution.
+            In addition to his teaching duties, he has taken on multiple administrative roles
+            including NAAC Coordinator, Examination Superintendent, and Science Coordinator for
+            the National Education Policy (NEP) Committee.
+        </p>
+
+        <!-- Research -->
+        <h2 id="research"><span class="mw-headline">Research</span></h2>
+
+        <h3 id="research-interests">Research interests</h3>
+        <p>Kumar's research interests span several areas within theoretical and applied computer science:</p>
+        <ul>
+            <li><a href="#">Theory of Computation</a></li>
+            <li><a href="#">Turing Machine</a> Complexity</li>
+            <li><a href="#">Artificial Intelligence</a> and <a href="#">Machine Learning</a></li>
+            <li><a href="#">Automata Theory</a></li>
+            <li><a href="#">Data Analytics</a></li>
+            <li><a href="#">Search-Based Software Engineering</a></li>
+            <li><a href="#">Genetic Algorithms</a> and <a href="#">Metaheuristics</a></li>
+        </ul>
+
+        <h3 id="publications">Selected publications</h3>
+        <p>
+            Kumar has published 13 research papers in journals indexed in UGC CARE, Scopus, and SCI,
+            with an <a href="#">h-index</a> of 1. His publications span topics including genetic algorithms,
+            automata theory, Turing machine complexity, and search-based software engineering.
+        </p>
+
+        <table class="wikitable">
+            <tr>
+                <th style="width:30px">#</th>
+                <th>Title</th>
+                <th>Journal / Publisher</th>
+                <th style="width:50px">Year</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>"A Population Initialization Method by Memetic Algorithm"</td>
+                <td><i>Advanced Research International Publication House</i>, Vol. 3, pp. 519&ndash;523</td>
+                <td>2013</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>"Hybridization in Genetic Algorithms"</td>
+                <td><i>Advanced Research International Publication House</i>, Vol. 3, pp. 403&ndash;409</td>
+                <td>2013</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>"Alpha Cut Based Novel Selection for Genetic Algorithm"</td>
+                <td><i>Foundation of Computer Science (FCS), USA</i>, Vol. 70, pp. 13&ndash;17</td>
+                <td>2013</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>"Novel Crossover Operator for Genetic Algorithm for Permutation Problems"</td>
+                <td><i>Blue Eyes Intelligence Engineering and Sciences Publication</i>, Vol. 3, pp. 252&ndash;258</td>
+                <td>2013</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>"State Complexity of Unary and Binary Operations on Regular Languages"</td>
+                <td><i>Advanced Research International Publication House</i>, Vol. 5, pp. 209&ndash;212</td>
+                <td>2015</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>"Complexity Measure of Turing Machine"</td>
+                <td><i>International Journal of Computer Science and Mobile Computing</i>, Vol. 4, pp. 135&ndash;138</td>
+                <td>2015</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>"Automatic Scanning and Parsing using LEX and YACC"</td>
+                <td><i>ZAIN Publications, Sweden</i>, Vol. 6, pp. 77&ndash;82</td>
+                <td>2017</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>"Complexity of Binary and Unary Operations on Regular Grammar"</td>
+                <td><i>Blue Eyes Intelligence Engineering and Sciences Publication</i>, Vol. 7, pp. 42&ndash;45</td>
+                <td>2017</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>"Innovation for Digital India"</td>
+                <td><i>ZAIN Publications, Sweden</i>, Vol. 6, pp. 173&ndash;177</td>
+                <td>2017</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>"Complexity of NL and its Connection with Logic"</td>
+                <td><i>Blue Eyes Intelligence Engineering and Sciences Publication</i>, Vol. 7, pp. 34&ndash;36</td>
+                <td>2017</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>"Efficient Encoding Scheme in Genetic Algorithm for Requirement Optimization"</td>
+                <td><i>Blue Eyes Intelligence Engineering and Sciences Publication</i>, Vol. 8, pp. 489&ndash;493</td>
+                <td>2019</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>"Optimizing Requirement Analysis by the Use of Meta-Heuristic in Search Based Software Engineering"</td>
+                <td><i>Institute of Advanced Engineering and Science</i>, Vol. 9, pp. 4336&ndash;4343</td>
+                <td>2019</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>"One-Way Tape Deterministic PDA"</td>
+                <td><i>REDVET &mdash; Revista electr&oacute;nica de Veterinaria</i>, Vol. 24, pp. 532&ndash;534</td>
+                <td>2023</td>
+            </tr>
+        </table>
+
+        <!-- Books -->
+        <h2 id="books"><span class="mw-headline">Books and book chapters</span></h2>
+        <p>Kumar has authored or co-authored the following books and book chapters:</p>
+        <table class="wikitable">
+            <tr>
+                <th>Title</th>
+                <th>Publisher</th>
+                <th style="width:50px">Year</th>
+            </tr>
+            <tr>
+                <td><i>Office Tool</i></td>
+                <td>Laxmi Book Depot</td>
+                <td>2024</td>
+            </tr>
+            <tr>
+                <td><i>Digital Efficiency Tool</i></td>
+                <td>Bharat Publication, New Delhi</td>
+                <td>2025</td>
+            </tr>
+            <tr>
+                <td><i>Mathematical Foundation &ndash; II</i></td>
+                <td>Distance Education, Kurukshetra University</td>
+                <td>2016</td>
+            </tr>
+            <tr>
+                <td><i>Web Engineering</i></td>
+                <td>Distance Education, Kurukshetra University</td>
+                <td>2015</td>
+            </tr>
+            <tr>
+                <td>Chapter: <i>Logical Organisation of Computer</i></td>
+                <td>Distance Education, Kurukshetra University</td>
+                <td>2014</td>
+            </tr>
+        </table>
+
+        <!-- Courses taught -->
+        <h2 id="courses"><span class="mw-headline">Courses taught</span></h2>
+        <div style="column-count: 2; column-gap: 30px;">
+            <ul>
+                <li>Linux and Shell Programming</li>
+                <li><a href="#">Theory of Computation</a></li>
+                <li><a href="#">Design &amp; Analysis of Algorithms</a></li>
+                <li><a href="#">Operating Systems</a></li>
+                <li><a href="#">Database Management Systems</a></li>
+                <li><a href="#">Artificial Intelligence</a></li>
+                <li><a href="#">Python</a> Programming</li>
+                <li>Data Analytics using <a href="#">R</a></li>
+            </ul>
+        </div>
+
+        <!-- Technical expertise -->
+        <h2 id="skills"><span class="mw-headline">Technical expertise</span></h2>
+        <table class="wikitable" style="width: auto;">
+            <tr>
+                <th>Category</th>
+                <th>Skills</th>
+            </tr>
+            <tr>
+                <td><b>Expert</b></td>
+                <td><a href="#">Linux</a> Administration, <a href="#">LaTeX</a></td>
+            </tr>
+            <tr>
+                <td><b>Programming languages</b></td>
+                <td><a href="#">Python</a>, Shell Script, <a href="#">C</a>/<a href="#">C++</a>, <a href="#">Java</a>, <a href="#">R</a></td>
+            </tr>
+            <tr>
+                <td><b>Tools</b></td>
+                <td><a href="#">MATLAB</a>, <a href="#">SPSS</a></td>
+            </tr>
+            <tr>
+                <td><b>Databases</b></td>
+                <td><a href="#">MySQL</a>, <a href="#">Oracle</a></td>
+            </tr>
+            <tr>
+                <td><b>Operating systems</b></td>
+                <td><a href="#">Linux</a>, <a href="#">macOS</a>, <a href="#">Windows</a></td>
+            </tr>
+            <tr>
+                <td><b>LMS platforms</b></td>
+                <td><a href="#">Moodle</a>, <a href="#">Google Classroom</a></td>
+            </tr>
+        </table>
+
+        <!-- Workshops -->
+        <h2 id="workshops"><span class="mw-headline">Workshops, FDPs, and conferences</span></h2>
+        <p>
+            Kumar has attended 18 workshops, <a href="#">Faculty Development Programmes</a> (FDPs), and
+            conferences between 2013 and 2022, covering topics ranging from data analytics and artificial
+            intelligence to ethical hacking and digital transformation.
+        </p>
+        <table class="wikitable">
+            <tr>
+                <th style="width:50px">Year</th>
+                <th>Event</th>
+            </tr>
+            <tr><td>2013</td><td>2-Day National Level Workshop on Curriculum Revision</td></tr>
+            <tr><td>2014</td><td>National Mission on Education through ICT</td></tr>
+            <tr><td>2014</td><td>Futuristic Approach to Ethical Hacking &amp; Networking Security: Key Concerns</td></tr>
+            <tr><td>2015</td><td>Crop Technology-Led Agricultural Development &amp; Sustainability of Ecosystem in India</td></tr>
+            <tr><td>2015</td><td>5-Day Workshop on Data Analytics</td></tr>
+            <tr><td>2015</td><td>Latest Developments in ICT: Social Networking and Its Security</td></tr>
+            <tr><td>2015</td><td>Cyber Terrorism and National Security</td></tr>
+            <tr><td>2016</td><td>Data Handling Techniques: Applications in IT</td></tr>
+            <tr><td>2016</td><td>Smart Bharat: A Business Perspective</td></tr>
+            <tr><td>2018</td><td>Two-Week FDP on Entrepreneurship</td></tr>
+            <tr><td>2018</td><td>Technological Symposium for the Digital Transformation of India</td></tr>
+            <tr><td>2019</td><td>Recent Trends in Computer Applications and IT</td></tr>
+            <tr><td>2019</td><td>Recent Advancements in IT &amp; E-Commerce: Present Scenario &amp; Future Prospects (RAITECOM-2019)</td></tr>
+            <tr><td>2020</td><td>5-Day National Level FDP on Artificial Intelligence</td></tr>
+            <tr><td>2020</td><td>1-Week FDP on E-Content Development</td></tr>
+            <tr><td>2021</td><td>1-Week UGC Sponsored Workshop on Leadership Development</td></tr>
+            <tr><td>2021</td><td>1-Week FDP on Entrepreneurship Development</td></tr>
+            <tr><td>2022</td><td>Emerging Trends of Technologies in Current Era</td></tr>
+        </table>
+
+        <!-- Administrative responsibilities -->
+        <h2 id="admin"><span class="mw-headline">Administrative responsibilities</span></h2>
+        <p>In addition to his teaching and research, Kumar has held several administrative positions:</p>
+        <ul>
+            <li>Head, Department of Computer Science &amp; Applications</li>
+            <li>Science Coordinator, <a href="#">National Education Policy</a> (NEP) Committee</li>
+            <li><a href="#">NAAC</a> Coordinator</li>
+            <li>Examination Superintendent</li>
+            <li>Coordinator, Science Day / Technical Events</li>
+            <li>Member, Organising Committee &mdash; "Cyber Terrorism and National Security" (April 11&ndash;12, 2015)</li>
+            <li>Member, Organising Committee &mdash; "Biodiversity &amp; Sustainable Development" (March 24, 2015)</li>
+            <li>Member, Organising Committee &mdash; "Biodiversity &amp; Environmental Sustainability in Modern Era" (February 16, 2019)</li>
+        </ul>
+
+        <!-- References -->
+        <h2 id="references"><span class="mw-headline">References</span></h2>
+        <ol style="font-size: 13px;">
+            <li>Faculty Profile, Department of Computer Science &amp; Applications, CRM Jat College, Hisar.</li>
+            <li>Kurukshetra University Ph.D. Thesis Records (2020).</li>
+            <li>ORCID Profile: 0000-0002-789X-5495.</li>
+            <li>Google Scholar Profile &mdash; Dr. Rajesh Kumar.</li>
+            <li>UGC CARE List of Journals, University Grants Commission, India.</li>
+        </ol>
+
+        <!-- External links -->
+        <h2 id="external"><span class="mw-headline">External links</span></h2>
+        <ul>
+            <li><a href="#">Google Scholar profile</a></li>
+            <li><a href="#">ORCID: 0000-0002-789X-5495</a></li>
+            <li><a href="#">ResearchGate profile</a></li>
+            <li><a href="#">CRM Jat College, Hisar &mdash; Official website</a></li>
+            <li><a href="#">Kurukshetra University &mdash; Official website</a></li>
+        </ul>
+
+        <div class="clear"></div>
+
+        <!-- Categories -->
+        <div class="catlinks">
+            <b>Categories:</b>
+            <a href="#">Living people</a> &middot;
+            <a href="#">1984 births</a> &middot;
+            <a href="#">Indian computer scientists</a> &middot;
+            <a href="#">Kurukshetra University alumni</a> &middot;
+            <a href="#">People from Kurukshetra</a> &middot;
+            <a href="#">Academic staff of CRM Jat College</a> &middot;
+            <a href="#">Researchers in artificial intelligence</a> &middot;
+            <a href="#">Researchers in automata theory</a> &middot;
+            <a href="#">Indian academics</a> &middot;
+            <a href="#">Machine learning researchers</a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="wiki-footer">
+        This page was last edited on 3 June 2026. &middot;
+        Content is available under <a href="#">Creative Commons Attribution-ShareAlike 4.0 License</a>. &middot;
+        <a href="#">Privacy policy</a> &middot; <a href="#">About Wikipedia</a> &middot; <a href="#">Disclaimers</a>
+    </div>
+</div>
+
+</body>
+</html>
