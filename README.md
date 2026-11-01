@@ -1,75 +1,64 @@
-# Dr. Rajesh Kumar — Academic Profile Page
+# Dr. Rajesh Kumar — Academic & Research Website
 
-A Wikipedia-style academic profile page for **Dr. Rajesh Kumar**, Assistant Professor & Head, Department of Computer Science & Applications, CRM Jat College, Hisar, Haryana, India.
+Personal academic website for **Dr. Rajesh Kumar**, Assistant Professor & Head, Department of Computer Science & Applications, CRM Jat College, Hisar, Haryana, India (affiliated with **Guru Jambheshwar University of Science & Technology, Hisar**).
 
-## Live Page
-
-**https://rajtaya.github.io/Rkumar/**
+**Live:** https://rajtaya.github.io/Rkumar/
 
 ## About
 
-This is a professionally designed, Wikipedia-themed faculty profile page built with pure HTML & CSS. It showcases Dr. Rajesh Kumar's complete academic profile including:
+A fast, accessible, mobile-responsive faculty website built with plain HTML5 + CSS (no build step, no framework). It presents research, publications, software projects, teaching, and professional service.
 
-- Education (B.Sc., MCA, Ph.D. from Kurukshetra University)
-- 16+ years of teaching experience across 3 institutions
-- 13 research publications (UGC CARE / Scopus / SCI indexed)
-- 5 books and book chapters
-- 18 workshops, FDPs, and conferences attended
-- Technical skills and courses taught
-- Administrative responsibilities
-
-## Project Structure
+## Structure
 
 ```
 Rkumar/
-  index.html    # Complete Wikipedia-style profile page (HTML + CSS)
-  README.md     # This file
+  index.html          # Homepage: hero, bio, research, selected publications, projects, teaching, contact
+  research.html       # Research areas + current directions
+  publications.html   # Full publications (journal / conference / books)
+  projects.html       # Software projects (Aryan TechLabs)
+  profile.html        # Career timeline, teaching, technical expertise, workshops, lectures, service
+  assets/
+    styles.css        # Design system (IBM Plex Serif/Sans/Mono; cool paper + garnet; light + dark)
+    site.js           # Mobile nav + theme toggle (site works without JS)
+    favicon.svg
+    rajesh-kumar.jpg          # Hero portrait
+    rajesh-kumar-square.jpg   # Social/OG image
+  papers/             # Hosted full-text PDFs
+  sitemap.xml  robots.txt
 ```
 
-## How to Edit
+## Editing
 
-### Quick Edit (via GitHub)
-1. Open [`index.html`](./index.html) on GitHub
-2. Click the pencil icon (Edit this file)
-3. Make your changes
-4. Click **Commit changes**
-5. The live page updates automatically in ~1 minute
+### Via GitHub (quick)
+1. Open the relevant `.html` file on GitHub → pencil (Edit) → commit. Live page updates in ~1 minute.
 
-### Local Edit
+### Locally
 ```bash
 git clone https://github.com/Rajtaya/Rkumar.git
 cd Rkumar
-# Edit index.html with any text editor
-open index.html          # Preview locally in browser
-git add index.html
-git commit -m "Update profile"
-git push
+open index.html
 ```
 
-## Common Edits
+| What to change | Where |
+|---|---|
+| Add a publication | Add a `.pub` block in `publications.html` |
+| Add a project | Add a `.card` in `projects.html` |
+| Add a workshop / lecture | Add an `.event` in `profile.html` |
+| Edit bio / hero | `index.html` (hero + About) |
+| Colours / fonts | CSS variables at the top of `assets/styles.css` |
 
-| What to Change | Where to Find It |
-|----------------|-----------------|
-| Personal details | Search for `infobox` section |
-| Professional summary | Search for `Lead paragraph` comment |
-| Add a publication | Add a new `<tr>` row inside the publications `<table>` |
-| Add a book | Add a new `<tr>` row inside the books `<table>` |
-| Add a workshop | Add a new `<tr>` row inside the workshops `<table>` |
-| Update experience | Edit the `Academic career` section |
-| Change styling | Modify the `<style>` block at the top |
+## Profile links
 
-## Tech Stack
+- **ORCID:** https://orcid.org/0000-0002-7897-5495
+- **Email:** rajtaya@kuk.ac.in
+- *Google Scholar / ResearchGate links: to be added (see `INFORMATION_REQUIRED.md`).*
 
-- **Pure HTML5 & CSS3** — no frameworks, no dependencies, no build step
-- **Hosted on** GitHub Pages (free)
-- **Responsive** — works on desktop and mobile
+## Notes
 
-## Profile Links
+- Indexing is shown per journal only where independently verifiable.
+- Software projects are production work built through Aryan TechLabs.
+- See `WEBSITE_AUDIT.md`, `INFORMATION_REQUIRED.md`, and `WEBSITE_FINAL_REPORT.md` for the redesign record.
 
-- ORCID: `0000-0002-789X-5495`
-- Email: rajtaya@kuk.ac.in
-- Institution: CRM Jat College, Hisar (Chaudhary Ranbir Singh University, Jind)
+## Tech
 
-## License
-
-This profile page is created for academic/personal use.
+Pure HTML5 + CSS3, minimal vanilla JS, Google Fonts (IBM Plex). Hosted on GitHub Pages.

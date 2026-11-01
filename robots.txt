@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rajtaya.github.io/Rkumar/sitemap.xml
