@@ -1,6 +1,6 @@
 # Dr. Rajesh Kumar — Academic & Research Website
 
-Personal academic website for **Dr. Rajesh Kumar**, Assistant Professor & Head, Department of Computer Science & Applications, CRM Jat College, Hisar, Haryana, India (affiliated with **Guru Jambheshwar University of Science & Technology, Hisar**).
+Personal academic website for **Dr. Rajesh Kumar**, Assistant Professor & Head, Department of Computer Science & Applications, CRM Jat College, Hisar, Haryana, India.
 
 **Live:** https://rajtaya.github.io/Rkumar/
 
