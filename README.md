@@ -47,11 +47,25 @@ open index.html
 | Edit bio / hero | `index.html` (hero + About) |
 | Colours / fonts | CSS variables at the top of `assets/styles.css` |
 
+## Downloadable CV
+
+`cv.html` is the source for `assets/Dr-Rajesh-Kumar-CV.pdf` (A4, 3 pages). After editing `cv.html`, regenerate the PDF with Chrome:
+
+```bash
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --no-pdf-header-footer \
+  --virtual-time-budget=10000 --print-to-pdf="$PWD/assets/Dr-Rajesh-Kumar-CV.pdf" "file://$PWD/cv.html"
+```
+
+Keep the CV consistent with the website pages when adding publications or roles.
+
 ## Profile links
 
 - **ORCID:** https://orcid.org/0000-0002-7897-5495
 - **Email:** rajtaya@kuk.ac.in
-- *Google Scholar / ResearchGate links: to be added (see `INFORMATION_REQUIRED.md`).*
+- **Google Scholar:** https://scholar.google.com/citations?user=DC4miOsAAAAJ
+- **ResearchGate:** https://www.researchgate.net/profile/Rajesh-Kumar-34
+- **LinkedIn:** https://www.linkedin.com/in/dr-rajesh-kumar-3b3685109/
+- Scholar metrics shown on the site carry a retrieval date; refresh them periodically from the profile.
 
 ## Notes
 

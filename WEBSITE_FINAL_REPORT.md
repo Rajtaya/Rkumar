@@ -85,3 +85,21 @@ GitHub Pages will rebuild in ~1 minute at https://rajtaya.github.io/Rkumar/.
 Prefer a safer review first? I can push the branch and open a pull request so you can read the diff before anything reaches `main`.
 
 *(The `.claude/launch.json` is only a local preview helper; harmless to keep or delete.)*
+
+---
+
+## 9. Reviewer follow-up (9 November 2026)
+
+Response to `Academic_Profile_Website_Review_and_Recommendations.docx` (rated 8.5/10; recommended precision, not redesign).
+
+| # | Recommendation | Action |
+|---|---|---|
+| 1 | Verify College ERP repo link | The card described the v2 stack but linked the older public `college-erp` repo. `college-erp-v2` is **private**, so linking it would 404 for visitors. Link removed; card marked "Private institutional codebase", stack shown as Next.js → NestJS → Prisma → PostgreSQL. |
+| 2 | Improve publication records | IJECE 2019: official title, Vol. 9 **No. 5**, DOI `10.11591/ijece.v9i5.pp4336-4343` (resolves), Scopus EID `2-s2.0-85067599558` → labelled "Indexed in Scopus". IJITEE 2019: Vol. 8 **Issue 8S3**, June 2019, ISSN 2278-3075, publisher PDF link. Authors of both confirmed from publisher records. REDVET: publisher's exact title kept with **[sic]** ("Determinsitic"), per the reviewer's guidance. |
+| 3 | Verifiable metrics | Scholar profile `DC4miOsAAAAJ` verified (CRM Jat College, verified kuk.ac.in email, matching papers/co-authors). 75 citations / h-index 3 / i10-index 2 shown on Publications + homepage, linked to the profile, with retrieval date 9 Nov 2026 and a "figures change" note. Removed the metrics that had been styled as a "pending placeholder" in the contact block. |
+| 4 | Downloadable CV | `assets/Dr-Rajesh-Kumar-CV.pdf` (A4, 3 pages) generated from `cv.html` with headless Chrome; linked from hero, contact, and Profile page. Regeneration steps in README. |
+| 5 | Project evidence (screenshots, role, status, architecture) | Architecture line added for College ERP. **Screenshots not added** — need real captures without institutional/student data. |
+| 6 | Academic/professional service | IJRA (IAES) reviewer role already present; no further roles added (only confirmed roles may be listed). |
+| 7 | Link + mobile audit | All internal pages/assets 200; every external link checked (LinkedIn 999 / ResearchGate 403 are bot-blocks, not broken). **Fixed a dark-mode bug:** the primary button and skip link had white text on a light background. No console errors. |
+
+**Still open:** screenshots for major projects; the duplicate IJITEE entry on ORCID that carries the IJECE DOI (fix on ORCID, not on the site); reviewer's suggested research-page sections on experimental work/benchmarks need your actual research content.
